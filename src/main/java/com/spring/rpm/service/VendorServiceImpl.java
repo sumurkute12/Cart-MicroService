@@ -32,7 +32,7 @@ public class VendorServiceImpl implements VendorService {
 	@Override
 	public Vendor getVendoreById(long vendoreId) {
 		log.info("request for get vendore vendore by id recived");
-		Vendor vendore= rt.getForObject("http://vendor-service/vendor/"+vendoreId, Vendor.class);
+		Vendor vendore= rt.getForObject("http://3.16.180.103:8003/vendor/"+vendoreId, Vendor.class);
 		log.info("request vendore find by id executed successfully");
 		return vendore;
 	}

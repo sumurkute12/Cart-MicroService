@@ -17,7 +17,7 @@ public class ProductService {
 	
 	 public Product getProductbyId(long productId) {	
 		 log.info("call made to product microservice for Product of id:"+productId);
-		 return rt.getForObject("http://product-service/product/productById/"+productId, Product.class);
+		 return rt.getForObject("http://13.58.234.18:8001/product/productById/"+productId, Product.class);
 		 
 	 } 
 	

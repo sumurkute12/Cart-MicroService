@@ -40,7 +40,7 @@ public class CartServiceImpl implements CartService {
 		long productId = cartRequestDto.getProductId();
 		long quantity = cartRequestDto.getQuantity();
 
-		Vendor vendoreDetails = rt.getForObject("http://vendor-service/vendor/" + productId + "/" + quantity,
+		Vendor vendoreDetails = rt.getForObject("http://3.16.180.103:8003/vendor/" + productId + "/" + quantity,
 				Vendor.class);
 		log.info("Vendore call got successfuly");
 		if (isVendorEmpty(vendoreDetails)) {
